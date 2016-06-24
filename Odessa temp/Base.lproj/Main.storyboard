@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Odessa_temp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,70 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- : -" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6U-I9-cwW">
+                                <rect key="frame" x="20" y="65" width="560" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="s8A-Ru-5QU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKC-mc-Ru9">
+                                <rect key="frame" x="310" y="170" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="QTK-ix-c9d"/>
+                                    <constraint firstAttribute="height" constant="50" id="kZL-px-7NT"/>
+                                </constraints>
+                                <state key="normal" title="SAVE"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VZY-J7-d5T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPr-tl-D3Z">
+                                <rect key="frame" x="190" y="170" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="A3P-dk-KSD"/>
+                                    <constraint firstAttribute="height" constant="50" id="XdX-DG-bsv"/>
+                                </constraints>
+                                <state key="normal" title="RELOAD"/>
+                                <connections>
+                                    <action selector="reloadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJ3-VT-2jW"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mSb-zh-Y2b">
+                                <rect key="frame" x="0.0" y="270" width="600" height="330"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="enL-o3-9Id"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Vzw-JM-XMo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CKC-mc-Ru9" firstAttribute="top" secondItem="I6U-I9-cwW" secondAttribute="bottom" constant="25" id="09a-rE-Xit"/>
+                            <constraint firstAttribute="trailing" secondItem="mSb-zh-Y2b" secondAttribute="trailing" id="98a-dO-Y1x"/>
+                            <constraint firstItem="QPr-tl-D3Z" firstAttribute="centerY" secondItem="CKC-mc-Ru9" secondAttribute="centerY" id="Dw1-ZE-nuV"/>
+                            <constraint firstItem="mSb-zh-Y2b" firstAttribute="top" secondItem="CKC-mc-Ru9" secondAttribute="bottom" constant="50" id="K4e-PJ-dGz"/>
+                            <constraint firstAttribute="trailing" secondItem="I6U-I9-cwW" secondAttribute="trailing" constant="20" id="PrH-Ek-iKf"/>
+                            <constraint firstItem="I6U-I9-cwW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="cHT-gv-7ET"/>
+                            <constraint firstItem="mSb-zh-Y2b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eba-Nm-FZe"/>
+                            <constraint firstItem="CKC-mc-Ru9" firstAttribute="centerX" secondItem="I6U-I9-cwW" secondAttribute="centerX" constant="60" id="rFk-bE-VUR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mSb-zh-Y2b" secondAttribute="bottom" id="rdO-Nv-Q39"/>
+                            <constraint firstItem="I6U-I9-cwW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="sBi-sa-OvK"/>
+                            <constraint firstItem="CKC-mc-Ru9" firstAttribute="leading" secondItem="QPr-tl-D3Z" secondAttribute="trailing" constant="20" id="zBB-5k-pO4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="mSb-zh-Y2b" id="IDU-Ix-D7R"/>
+                        <outlet property="tempInfoLabel" destination="I6U-I9-cwW" id="BeN-Wz-Q94"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="332" y="281"/>
         </scene>
     </scenes>
 </document>

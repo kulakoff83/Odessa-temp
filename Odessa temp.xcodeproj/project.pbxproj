@@ -13,6 +13,13 @@
 		5D9156EC1D1C7703002BD0FB /* Odessa_temp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D9156EA1D1C7703002BD0FB /* Odessa_temp.xcdatamodeld */; };
 		5D9156EE1D1C7703002BD0FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D9156ED1D1C7703002BD0FB /* Assets.xcassets */; };
 		5D9156F11D1C7703002BD0FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9156EF1D1C7703002BD0FB /* LaunchScreen.storyboard */; };
+		5D9156F91D1C779B002BD0FB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9156F81D1C779B002BD0FB /* CoreDataStack.swift */; };
+		5D9157031D1C7BBD002BD0FB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9157021D1C7BBD002BD0FB /* Extensions.swift */; };
+		5D9157051D1C7C1B002BD0FB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9157041D1C7C1B002BD0FB /* APIManager.swift */; };
+		5D91571E1D1C9D53002BD0FB /* TemperatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D91571C1D1C9D53002BD0FB /* TemperatureTableViewCell.swift */; };
+		5D91571F1D1C9D53002BD0FB /* TemperatureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D91571D1D1C9D53002BD0FB /* TemperatureTableViewCell.xib */; };
+		5D9157321D1CD654002BD0FB /* Temperature+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9157301D1CD654002BD0FB /* Temperature+CoreDataProperties.swift */; };
+		5D9157331D1CD654002BD0FB /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9157311D1CD654002BD0FB /* Temperature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		5D9156ED1D1C7703002BD0FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D9156F01D1C7703002BD0FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D9156F21D1C7703002BD0FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D9156F81D1C779B002BD0FB /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		5D9157021D1C7BBD002BD0FB /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5D9157041D1C7C1B002BD0FB /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		5D91571C1D1C9D53002BD0FB /* TemperatureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureTableViewCell.swift; sourceTree = "<group>"; };
+		5D91571D1D1C9D53002BD0FB /* TemperatureTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemperatureTableViewCell.xib; sourceTree = "<group>"; };
+		5D9157301D1CD654002BD0FB /* Temperature+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Temperature+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5D9157311D1CD654002BD0FB /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,46 @@
 		5D9156E21D1C7703002BD0FB /* Odessa temp */ = {
 			isa = PBXGroup;
 			children = (
+				5D91571B1D1C9D27002BD0FB /* Cell */,
+				5D9157011D1C7A31002BD0FB /* Model */,
+				5D9156FF1D1C7A0A002BD0FB /* Classes */,
 				5D9156E31D1C7703002BD0FB /* AppDelegate.swift */,
 				5D9156E51D1C7703002BD0FB /* ViewController.swift */,
 				5D9156E71D1C7703002BD0FB /* Main.storyboard */,
 				5D9156ED1D1C7703002BD0FB /* Assets.xcassets */,
 				5D9156EF1D1C7703002BD0FB /* LaunchScreen.storyboard */,
 				5D9156F21D1C7703002BD0FB /* Info.plist */,
-				5D9156EA1D1C7703002BD0FB /* Odessa_temp.xcdatamodeld */,
 			);
 			path = "Odessa temp";
+			sourceTree = "<group>";
+		};
+		5D9156FF1D1C7A0A002BD0FB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5D9157021D1C7BBD002BD0FB /* Extensions.swift */,
+				5D9157041D1C7C1B002BD0FB /* APIManager.swift */,
+				5D9156F81D1C779B002BD0FB /* CoreDataStack.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		5D9157011D1C7A31002BD0FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D9157301D1CD654002BD0FB /* Temperature+CoreDataProperties.swift */,
+				5D9157311D1CD654002BD0FB /* Temperature.swift */,
+				5D9156EA1D1C7703002BD0FB /* Odessa_temp.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5D91571B1D1C9D27002BD0FB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5D91571C1D1C9D53002BD0FB /* TemperatureTableViewCell.swift */,
+				5D91571D1D1C9D53002BD0FB /* TemperatureTableViewCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +173,7 @@
 				5D9156F11D1C7703002BD0FB /* LaunchScreen.storyboard in Resources */,
 				5D9156EE1D1C7703002BD0FB /* Assets.xcassets in Resources */,
 				5D9156E91D1C7703002BD0FB /* Main.storyboard in Resources */,
+				5D91571F1D1C9D53002BD0FB /* TemperatureTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +184,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D9157321D1CD654002BD0FB /* Temperature+CoreDataProperties.swift in Sources */,
+				5D9157051D1C7C1B002BD0FB /* APIManager.swift in Sources */,
+				5D9157331D1CD654002BD0FB /* Temperature.swift in Sources */,
+				5D9157031D1C7BBD002BD0FB /* Extensions.swift in Sources */,
 				5D9156E61D1C7703002BD0FB /* ViewController.swift in Sources */,
 				5D9156EC1D1C7703002BD0FB /* Odessa_temp.xcdatamodeld in Sources */,
 				5D9156E41D1C7703002BD0FB /* AppDelegate.swift in Sources */,
+				5D91571E1D1C9D53002BD0FB /* TemperatureTableViewCell.swift in Sources */,
+				5D9156F91D1C779B002BD0FB /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
